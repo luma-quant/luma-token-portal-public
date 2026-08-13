@@ -98,8 +98,8 @@ test('release records verified public publication without claiming deployment', 
   assert.equal(parsed.version, 'v0.1.0-rc1');
   assert.equal(parsed.public_release, '0.1.0-rc1');
   assert.equal(parsed.release_class, 'REFERENCE_IMPLEMENTATION');
-  assert.equal(parsed.repository, 'wotanIII/luma-token-portal-public');
-  assert.equal(parsed.repository_url, 'https://github.com/wotanIII/luma-token-portal-public');
+  assert.equal(parsed.repository, 'luma-quant/luma-token-portal-public');
+  assert.equal(parsed.repository_url, 'https://github.com/luma-quant/luma-token-portal-public');
   assert.equal(parsed.repository_creation_status, 'COMPLETED_VERIFIED');
   assert.equal(parsed.repository_visibility, 'PUBLIC_VERIFIED');
   assert.equal(parsed.repository_purpose, 'TRUST_LAYER_V1_PUBLIC_SOURCE');
@@ -128,11 +128,19 @@ test('release records verified public publication without claiming deployment', 
   const evidenceBytes = await readFile(path.join(root, parsed.publication_evidence_file));
   const evidence = JSON.parse(evidenceBytes);
   assert.equal(parsed.publication_evidence_sha256, sha256(evidenceBytes));
+  assert.equal(evidence.repository, 'luma-quant/luma-token-portal-public');
+  assert.equal(evidence.repository_url, 'https://github.com/luma-quant/luma-token-portal-public');
+  assert.match(evidence.github_actions.run_url, /^https:\/\/github\.com\/luma-quant\/luma-token-portal-public\/actions\/runs\//);
+  for (const job of Object.values(evidence.github_actions.jobs)) {
+    assert.match(job.url, /^https:\/\/github\.com\/luma-quant\/luma-token-portal-public\/actions\/runs\//);
+  }
   assert.equal(evidence.status_alignment_basis.commit_sha, '64c73b23aa0e6039653079d2b321d4025c0758d9');
   assert.equal(evidence.status_alignment_basis.self_reference_avoided, true);
   assert.equal(evidence.github_actions.conclusion, 'SUCCESS');
   assert.equal(evidence.github_actions.jobs.codeql.conclusion, 'SUCCESS');
   assert.equal(evidence.code_scanning.open_alert_count, 0);
+  assert.equal(parsed.real_payments_status, 'REAL_PAYMENTS_DISABLED');
+  assert.equal(parsed.token_delivery_status, 'TOKEN_DELIVERY_DISABLED');
 });
 
 test('the only bundled asset has exact owner-confirmed rights evidence', async () => {

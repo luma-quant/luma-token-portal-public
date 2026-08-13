@@ -217,7 +217,7 @@ export function parseRelease(value) {
   exactString(value.public_release, '0.1.0-rc1', 'public release');
   exactString(value.status, 'PUBLIC_REFERENCE_PUBLISHED', 'release status');
   exactString(value.release_class, 'REFERENCE_IMPLEMENTATION', 'release class');
-  exactString(value.repository, 'wotanIII/luma-token-portal-public', 'repository identity');
+  exactString(value.repository, 'luma-quant/luma-token-portal-public', 'repository identity');
   exactString(value.repository_url, ['https:', '', 'github.com', value.repository].join('/'), 'repository URL');
   exactString(value.repository_creation_status, 'COMPLETED_VERIFIED', 'repository creation status');
   exactString(value.repository_visibility, 'PUBLIC_VERIFIED', 'repository visibility');

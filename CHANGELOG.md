@@ -1,5 +1,15 @@
 # Changelog
 
+## Organization binding preparation - 2026-08-13
+
+- Rebound the current public repository, evidence links, generator inputs and
+  tests to `luma-quant/luma-token-portal-public` after the owner-authorized
+  organization transfer.
+- Preserved the earlier namespace entry below as historical release context and
+  retained the private-staging repository deny rule.
+- Did not enable deployment, payments, delivery, refunds, minting or any other
+  runtime capability.
+
 ## Post-publication status alignment - 2026-08-13
 
 - Recorded the verified public repository and kept deployment `NOT_DEPLOYED` and production alignment `REFERENCE_ONLY`.

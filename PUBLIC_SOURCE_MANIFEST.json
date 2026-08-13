@@ -4,20 +4,20 @@
   "public_release": "0.1.0-rc1",
   "generated_at": "2026-08-13T00:00:00Z",
   "exported_at_utc": "2026-08-13T00:00:00Z",
-  "candidate_sha256": "14c3a609b6786039461ced562b569c772fbb1875be203c165c7cc6d6fc201333",
-  "public_candidate_sha256": "14c3a609b6786039461ced562b569c772fbb1875be203c165c7cc6d6fc201333",
+  "candidate_sha256": "9db503921a43253457e9035e548c4d5894855bacecba3edb994d286b6713eea8",
+  "public_candidate_sha256": "9db503921a43253457e9035e548c4d5894855bacecba3edb994d286b6713eea8",
   "source_private_commit_sha": "b39c2d752abfc9a1c4d151db8519e7b070c7c869",
   "export_tool_version": "2.1.0",
   "release_class": "REFERENCE_IMPLEMENTATION",
-  "repository": "wotanIII/luma-token-portal-public",
-  "repository_url": "https://github.com/wotanIII/luma-token-portal-public",
+  "repository": "luma-quant/luma-token-portal-public",
+  "repository_url": "https://github.com/luma-quant/luma-token-portal-public",
   "repository_creation_status": "COMPLETED_VERIFIED",
   "repository_visibility": "PUBLIC_VERIFIED",
   "repository_status": "PUBLIC_REPOSITORY_PUBLISHED",
   "publication_status": "PUBLIC_REPOSITORY_PUBLISHED",
   "publication_performed": true,
   "publication_evidence_file": "PUBLICATION_EVIDENCE.json",
-  "publication_evidence_sha256": "b059ddb941e47bae60756337ba77351702549870825b00abade77542d9fa9d17",
+  "publication_evidence_sha256": "7850800100aee99e1f6acefea7fd9713173629f8c22024735de763e7ddb57804",
   "separate_engine_e4_milestone": {
     "status": "NOT_YET_COMPLETED",
     "scope": "SEPARATE_ENGINE_EVIDENCE_MILESTONE",
@@ -76,13 +76,13 @@
     },
     {
       "path": "AUDIT_REPORT.md",
-      "bytes": 3502,
-      "sha256": "777ef79f1f7aa525d11cc10bbd1a26594b78533a0ef23bdbf2a7e558ef588164"
+      "bytes": 3506,
+      "sha256": "3669a1fe2b923f46279146cc248495037193b1a59e1bd86bba76e304547f1b26"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2303,
-      "sha256": "d686a4833f1032a1adc86440133ef2cd41012672d2ff0d8ef14532886213a217"
+      "bytes": 2767,
+      "sha256": "b8f147d839381fd9c68b3f2406400589a5787bdaf6ad0b56dd7501afd9113e64"
     },
     {
       "path": "DENYLIST.json",
@@ -156,23 +156,23 @@
     },
     {
       "path": "PUBLICATION_EVIDENCE.json",
-      "bytes": 1423,
-      "sha256": "b059ddb941e47bae60756337ba77351702549870825b00abade77542d9fa9d17"
+      "bytes": 1433,
+      "sha256": "7850800100aee99e1f6acefea7fd9713173629f8c22024735de763e7ddb57804"
     },
     {
       "path": "README.md",
-      "bytes": 5169,
-      "sha256": "8800ab8a200877176ec65f48d39918f6e76f6b6d2902e1d425322601344bd8c9"
+      "bytes": 5191,
+      "sha256": "a5bf6cf0615190e5edcb69b6b899487ac06fa2d8b5f1f5852981f4589371ea1d"
     },
     {
       "path": "RELEASE.json",
-      "bytes": 3642,
-      "sha256": "f97a5e236dc671be26004bdeb6afdd6a03a406b5d4dcc534a54c48a148dd3379"
+      "bytes": 3646,
+      "sha256": "d6b40806bb972db2e8cd331c7dd5a0b333f95228b5873696a538c0ba8c3a581a"
     },
     {
       "path": "SBOM.spdx.json",
       "bytes": 23402,
-      "sha256": "a3bec03898c11731d0e1fa0f3b5e41bf0241cff9d4b192e58dfe5a04ba3dfacf"
+      "sha256": "8479081ef5c59ac75dc3f0382bb3d1d0f9413b3a5a279a109e95fe7277a5e641"
     },
     {
       "path": "scripts/audit-boundary.mjs",
@@ -281,8 +281,8 @@
     },
     {
       "path": "src/public-contract.mjs",
-      "bytes": 16888,
-      "sha256": "b464cc2326c169dc2172849e0d581e4fe9ad411289457c0b77f1512b057d79ee"
+      "bytes": 16890,
+      "sha256": "de79832a8f364c4eecaeeda658c78a0ecec375fb9cc2db907c8cc2021cacf57c"
     },
     {
       "path": "src/styles.css",
@@ -291,8 +291,8 @@
     },
     {
       "path": "test/public-contract.test.mjs",
-      "bytes": 11095,
-      "sha256": "3127313590cd2ca24c159c9fb844f3e08ca9c11acbc2b174426281a804c8f4ac"
+      "bytes": 11727,
+      "sha256": "9258277e9edd0708a5089415f89ed7c7fcf046e4a130f191cc07fd42aa5db3e2"
     },
     {
       "path": "TOKEN_FACTS.json",

@@ -7,7 +7,7 @@
 - Release class: `REFERENCE_IMPLEMENTATION`
 - Production alignment: `REFERENCE_ONLY`
 - Private source commit: `b39c2d752abfc9a1c4d151db8519e7b070c7c869`
-- Public repository: `https://github.com/wotanIII/luma-token-portal-public`, creation and visibility verified
+- Public repository: `https://github.com/luma-quant/luma-token-portal-public`, creation and visibility verified
 - Associated live domain: `https://token.lumaquant.tech`; candidate deployment: `NOT_DEPLOYED`
 - Independent audit: `NOT_YET_COMPLETED`
 - Legal review: `NOT_YET_COMPLETED`
@@ -54,7 +54,7 @@ owner gates. Passing internal automated checks does not constitute an
 independent audit.
 
 The public baseline verification and CodeQL jobs passed in
-`https://github.com/wotanIII/luma-token-portal-public/actions/runs/31691842203`,
+`https://github.com/luma-quant/luma-token-portal-public/actions/runs/31691842203`,
 and a point-in-time GitHub code-scanning query returned zero open alerts. These
 facts are evidence for the pre-status baseline only; they do not pre-approve a
 later commit.
