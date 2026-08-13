@@ -1,0 +1,40 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": "mint-account",
+    "method": "getAccountInfo",
+    "params": [
+      "CuQkxCi19mw57e6c9HDrKGfbGapCUSxK5cTmK6uyDPhW",
+      {
+        "encoding": "jsonParsed",
+        "commitment": "finalized"
+      }
+    ]
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "token-supply",
+    "method": "getTokenSupply",
+    "params": [
+      "CuQkxCi19mw57e6c9HDrKGfbGapCUSxK5cTmK6uyDPhW",
+      {
+        "commitment": "finalized"
+      }
+    ]
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "operational-accounts",
+    "method": "getMultipleAccounts",
+    "params": [
+      [
+        "C3YjLvv2GEob77yWkibUnj66T892Y37BpPvbnf5ZD2rZ",
+        "68ZWTrd9wCq4HoUxBoDuV75geQPC9fVAFHAH9NgSLoyb"
+      ],
+      {
+        "encoding": "base64",
+        "commitment": "finalized"
+      }
+    ]
+  }
+]

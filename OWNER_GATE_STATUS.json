@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "candidate": "luma-token-portal",
+  "recorded_date": "2026-08-13",
+  "operator_identity": {
+    "status": "COMPLETED_OWNER_CONFIRMED",
+    "brand": "LUMA Quant",
+    "legal_operator": "Luma Quant e.U.",
+    "founder": "Johann Weitzer",
+    "jurisdiction": "Austria",
+    "independent_registry_verification": "NOT_PERFORMED"
+  },
+  "license": "PROPRIETARY_SOURCE_AVAILABLE_ALL_RIGHTS_RESERVED",
+  "asset_rights": {
+    "status": "COMPLETED_OWNER_CONFIRMED_FAIL_CLOSED",
+    "policy": "INCLUDE_ONLY_OWNED_OR_LICENSED_FOR_PUBLIC_REPOSITORY_EXCLUDE_ALL_UNRESOLVED",
+    "independent_verification": "NOT_PERFORMED"
+  },
+  "security_contact": {
+    "status": "COMPLETED_OWNER_CONFIRMED",
+    "address": "security@lumaquant.tech",
+    "active": "YES_OWNER_ATTESTED",
+    "monitored": "YES_OWNER_ATTESTED",
+    "test_reception": "PASS_OWNER_ATTESTED",
+    "independent_verification": "NOT_PERFORMED",
+    "response_time_sla": "NOT_CLAIMED"
+  },
+  "token_facts": {
+    "onchain": "VERIFIED_ON_CHAIN",
+    "verification_scope": "POINT_IN_TIME_FINALIZED_RPC_EVIDENCE",
+    "operator_policy": "OPERATOR_DECLARED"
+  },
+  "product_truth": {
+    "release_class": "REFERENCE_IMPLEMENTATION",
+    "production_alignment": "REFERENCE_ONLY",
+    "deployment_status": "NOT_DEPLOYED",
+    "real_payments": "REAL_PAYMENTS_DISABLED",
+    "token_delivery": "TOKEN_DELIVERY_DISABLED"
+  },
+  "publication_performed": false,
+  "open_review_matters": [
+    "LEGAL_REVIEW_NOT_YET_COMPLETED",
+    "INDEPENDENT_THIRD_PARTY_AUDIT_NOT_YET_COMPLETED"
+  ]
+}

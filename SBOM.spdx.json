@@ -1,0 +1,779 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "luma-token-portal-trust-reference-v0.1.0-rc1",
+  "documentNamespace": "https://lumaquant.tech/sbom/luma-token-portal/v0.1.0-rc1/reference",
+  "documentComment": "PUBLIC_SOURCE_MANIFEST.json, RELEASE.json and this SBOM are excluded from SPDX file records to prevent self-referential hash cycles. PUBLIC_SOURCE_MANIFEST.json separately closes over every candidate file except itself.",
+  "creationInfo": {
+    "created": "2026-08-13T00:00:00Z",
+    "creators": [
+      "Organization: Luma Quant e.U.",
+      "Tool: dependency-free-luma-sbom-generator-v1"
+    ],
+    "licenseListVersion": "3.25"
+  },
+  "packages": [
+    {
+      "name": "luma-token-portal-trust-reference",
+      "SPDXID": "SPDXRef-Package",
+      "versionInfo": "v0.1.0-rc1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "LicenseRef-LumaQuant-Proprietary",
+      "licenseDeclared": "LicenseRef-LumaQuant-Proprietary",
+      "copyrightText": "Copyright 2026 Luma Quant e.U. All rights reserved.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/luma-token-portal-trust-reference@0.1.0-rc1"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-618cd5b83d62060b",
+      "fileName": "./.gitattributes",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bf5e6f93ef71a5da42944d66af69e3ca41a911cfb55d40fbd2465d44b876a85e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-b803fcb7f17ed923",
+      "fileName": "./.github/workflows/ci.yml",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c6fa19f65446ffce5078793e0f7b7facad20950afff70ce4aacfd6854d1eebf3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-bc37d034bad56458",
+      "fileName": "./.gitignore",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "15cb6c4c12d827a8f990a5a35678fdd945913ac5976e555cd076dcf01b57529c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-0d5640350e5a357e",
+      "fileName": "./ALLOWLIST.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "02149200b5e3c27482bd755d609a74d3e3c7886810c88eb84b3a23817799d7e4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-8f6366fd8e7a5fa3",
+      "fileName": "./ARCHITECTURE.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6b8d5cc2ed62cd18bea7cc946c6d14e0a083986097ce373d7e98f46e26a4be29"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-aca7184fbcd5515c",
+      "fileName": "./ASSET_RIGHTS_INVENTORY.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5c7f561a15b02a4cc62556adf16da4c11a0bcf774cce559ccf116b47f805e4eb"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-c05b0e81130fba65",
+      "fileName": "./AUDIT_REPORT.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f02303b2143d1669f1310051633a9e2acbbaff31c97a78c0d873d01ab13a98b5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-06572a96a58dc510",
+      "fileName": "./CHANGELOG.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "538a2b4f47f5cfa234c52b6fae27abb7fb895225dae4c298c7557407d8cbcdb4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-5ad111369562e623",
+      "fileName": "./DENYLIST.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "212868c5769af53d2fd2e66e62f9a55c00ee6a6934a754b60c873063c19b0ef6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-688c8c0111a74c0b",
+      "fileName": "./evidence/onchain/SOLANA_RPC_REQUESTS.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "812e800c422c8ca226421fe9503956dc8ddb0edf81c18067675d92496b774dbc"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-61ddc2c96791368e",
+      "fileName": "./evidence/onchain/SOLANA_RPC_RESPONSES.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "12f575ab165c44aa51da48b8fc180ea4120a7d7e386bb1d54140e1ad18f0aa52"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-c06b641c7733c0d9",
+      "fileName": "./evidence/upstream/src/api/tokenPortalForge.test.ts",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dcece596ff7e06b7d887226977bb04d7971a7d256686b8c75259a25409f654d2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-d1c5c414ccd54547",
+      "fileName": "./evidence/upstream/src/tokenPortal/forge.ts",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "15a8ddac51ac78b17fad5ea9cccfd819e159beef03c7585a8ffe91d5f2dba84d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-0eb547304658805a",
+      "fileName": "./index.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dbe41dbc3dfc8fdea701144a13de57c5ca3e39edc0a16acadb2603703b2741e2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-8dfe8981cb7eb7f9",
+      "fileName": "./KNOWN_LIMITATIONS.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c89eeea3424e927e80993b47a0a3cb38225136625e8a41700197d12e528091cb"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-4673a3aba01813b5",
+      "fileName": "./LICENSE.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0f02c38a70126bc5d2d82a2c601367ac8186ad7cc20eee9e3dd074b270f36ea8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-53337bf7ea91d782",
+      "fileName": "./NOTICE.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5a5b887264f105580817df5e23e37eb0d9dabb6e37106f2ea31fd4a75e150c2c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-0f469095df61a60c",
+      "fileName": "./OWNER_GATE_STATUS.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0b4433f05738f5e886a3d32984e7dec39c239afd26f0376e39befd681dd5e61d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-053150b640a7ce75",
+      "fileName": "./package-lock.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d58c48f9cd0dd685f9b350549a0c8eef0217a6b863041c9b17e97b68d243b841"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-7ae45ad102eab3b6",
+      "fileName": "./package.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c22362720109cd7e9a4f0208bd7792c095ec64d113d542901c824ef848286c8a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-f9cb23be00d11a30",
+      "fileName": "./PUBLIC_PRIVATE_BOUNDARY.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9b44f4986dca5456dac6bffb1e7374a916793151807f533e1b4068e01983d06d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-45ff104721cc35d0",
+      "fileName": "./public/logo-1.webp",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f704323c96b027ee8fa43b62c40c31b4f02c8717d488afb46a95e2875c3e6446"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-b335630551682c19",
+      "fileName": "./README.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d47699d74be3aca6c533a349c66c7c80cf6d2cb4fd402dc7b4d302461f6829b7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-20e4be5aed14d245",
+      "fileName": "./scripts/audit-boundary.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c62614a570a68f2350342e7586525a0a45bf57287ac5c306d9b4256a39332aba"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-0ec4dd671d7829df",
+      "fileName": "./scripts/build-archive.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a79b5f542b67a6b4d773a37da333b644312c01879b7be7b166b43ea497ccde42"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-d3831cd61824ee87",
+      "fileName": "./scripts/build.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0d0277f472e31175a001f196a0fa646cb3cd32afb20b99249a922950cd6cd0fe"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-aed805b73bec9571",
+      "fileName": "./scripts/candidate-digest.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bb9b6583605ca8f2b0ef439dadac97ad975aac29baf5864f0d7e8ca6df2cd624"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-f094cedb6d84b58d",
+      "fileName": "./scripts/clean-generated.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "23c208d3a643950c9b12716ca4f5afcb4940477f5c0922ad9089c4fa11f31a66"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-17ab5ff7451e1b69",
+      "fileName": "./scripts/generate-public-manifest.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8c9af0d66ce9b5cb68c87ca79a0fc7e1807c059b619fcf38bd55caf2545ff830"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-4404a9e74f619abb",
+      "fileName": "./scripts/generate-sbom.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ceb094b2f8cf4c99d983649aa660f38628846662be118d3501d3bae03ecf96a4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-c14bcda0cf5b4ba2",
+      "fileName": "./scripts/lib.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7ede99ace1ccefd63b4827620e38a6989e90ed03bc301a66e91951df4e36d303"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-9485a2a6a0f22f6d",
+      "fileName": "./scripts/public-manifest-lib.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "965eaeb23aaf07d372b8eb18623eed8feef1c68f7421fc1a9a37e5b7c5574ab5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-d07ff48e18889e29",
+      "fileName": "./scripts/refresh-public-source.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "162a7e02467515ef1c58933552287b30000b24d6e29fdcf93bfac4f7e7869b6f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-aad511918e52013c",
+      "fileName": "./scripts/sbom-lib.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8fbb87ba7f162a13c16c09c7339be757c13e38071d636ebf5610a85735bee65d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-f5df910d59d27681",
+      "fileName": "./scripts/verify-ci.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "db97acdbacb6d8d2a3275301d1767727e1c7fd7aa11b2f9b0f9ce0ae0bcff68a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-5e8fb89dbdee5bda",
+      "fileName": "./scripts/verify-dist.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f5f2d948875ac14310fdb17cbd4081c5a0a86124ef04bbfe88d39e64e9d8768c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-aeee9a8bbf1a8e5c",
+      "fileName": "./scripts/verify-public-manifest.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "365952235bedd1f922a40a9281f6a764f2487c3fdbf6397875e087315a3c2d12"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-01b223d7683346dd",
+      "fileName": "./scripts/verify-release.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ae8438a0febc46cff5af777fdd2a26f4e45a25725d6ae8c2851b720da7aaf0e6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-c65640a4b1a758f8",
+      "fileName": "./scripts/verify-sbom.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a87c44432ebf2438806b43cdd4e047ee0a8cda9d0c970632f7cac28f43691d38"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-5c40a083c2ed5d15",
+      "fileName": "./scripts/verify-source.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2167749c8f12ead30dd58a8a90b8945ba5b9a0ef1a2db9f0f8734307cd8ab99d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-3993e72f18970361",
+      "fileName": "./scripts/verify-zero-dependencies.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "95d529406a4cb54458cf9a7442963ac9c6e627ec599f74a9efcedee8486cc03a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-4f3239e2a5ab3229",
+      "fileName": "./SECURITY_HEADERS.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7358bd1bd9c9708972587b4322dd188e74df7b7bcd3d66efc0929e5d4f65a4b1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-f6ed156e4bf5c791",
+      "fileName": "./SECURITY.md",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "def620352f1b5c1a77a35da93d91199999b6cc72c513cd6fdc217970c8ffae89"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-4aefad14393968f2",
+      "fileName": "./src/app.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9bd304c94fe41e946a20fb72e56810dc904996a3a2e325f3725f06fac80912ce"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-358f323dbfeeb1d9",
+      "fileName": "./src/public-contract.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8153a30fd962c5cc9174d866169844373d0ac613d8cab0bf372accfe4d391ccd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-4753b2e642784142",
+      "fileName": "./src/styles.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ef0fce7e734d966871fcfcf36ba6f446c437d5977781ca8763478f996bcbf807"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-98b55396f794c043",
+      "fileName": "./test/public-contract.test.mjs",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4a7c854d406238d16df6f74641b52479405d2dbf4d3c2e15edf01031152ecdac"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-632758afd431a01a",
+      "fileName": "./TOKEN_FACTS.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fa84ca436bddd3d69a22aa3638365edb9ce603457664b57800ee2ff773fa7f5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-File-fcf0502a57228624",
+      "fileName": "./UPSTREAM_SOURCE_EVIDENCE.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "107584ba4f549ac876699136e9fcdb19288ffae5ecbdb9df03c2219194619eed"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-618cd5b83d62060b"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-b803fcb7f17ed923"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-bc37d034bad56458"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-0d5640350e5a357e"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-8f6366fd8e7a5fa3"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-aca7184fbcd5515c"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-c05b0e81130fba65"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-06572a96a58dc510"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-5ad111369562e623"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-688c8c0111a74c0b"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-61ddc2c96791368e"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-c06b641c7733c0d9"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-d1c5c414ccd54547"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-0eb547304658805a"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-8dfe8981cb7eb7f9"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-4673a3aba01813b5"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-53337bf7ea91d782"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-0f469095df61a60c"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-053150b640a7ce75"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-7ae45ad102eab3b6"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f9cb23be00d11a30"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-45ff104721cc35d0"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-b335630551682c19"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-20e4be5aed14d245"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-0ec4dd671d7829df"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-d3831cd61824ee87"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-aed805b73bec9571"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f094cedb6d84b58d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-17ab5ff7451e1b69"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-4404a9e74f619abb"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-c14bcda0cf5b4ba2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-9485a2a6a0f22f6d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-d07ff48e18889e29"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-aad511918e52013c"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f5df910d59d27681"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-5e8fb89dbdee5bda"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-aeee9a8bbf1a8e5c"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-01b223d7683346dd"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-c65640a4b1a758f8"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-5c40a083c2ed5d15"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-3993e72f18970361"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-4f3239e2a5ab3229"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f6ed156e4bf5c791"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-4aefad14393968f2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-358f323dbfeeb1d9"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-4753b2e642784142"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-98b55396f794c043"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-632758afd431a01a"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-fcf0502a57228624"
+    }
+  ]
+}

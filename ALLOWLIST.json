@@ -1,0 +1,22 @@
+{
+  "schema": "luma-public-source-allowlist-v1",
+  "policy": "deny-by-default",
+  "source_commit": "b39c2d752abfc9a1c4d151db8519e7b070c7c869",
+  "entries": [
+    {
+      "source": "src/tokenPortal/forge.ts",
+      "target": "evidence/upstream/src/tokenPortal/forge.ts",
+      "mode": "verbatim-review-evidence"
+    },
+    {
+      "source": "src/api/tokenPortalForge.test.ts",
+      "target": "evidence/upstream/src/api/tokenPortalForge.test.ts",
+      "mode": "verbatim-review-evidence"
+    },
+    {
+      "source": "public/logo-1.webp",
+      "target": "public/logo-1.webp",
+      "mode": "verbatim-runtime-asset"
+    }
+  ]
+}

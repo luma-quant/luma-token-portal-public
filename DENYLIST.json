@@ -1,0 +1,33 @@
+{
+  "schema": "luma-public-source-denylist-v1",
+  "policy": "everything not explicitly allowlisted is excluded",
+  "excluded_source_paths": [
+    "all backend source and migrations",
+    "all environment and deployment configuration",
+    "all wallet-provider and transaction-signing modules",
+    "all SOL or USDC checkout and value-rail modules",
+    "all token-delivery, LUMAKey issuance and redemption modules",
+    "all workspace, analytics, advisor and credit-ledger modules",
+    "all administration, support, monitoring and abuse-control modules",
+    "all private API clients and non-public route catalogs",
+    "all source maps, generated bundles and local caches"
+  ],
+  "forbidden_capabilities": [
+    "secret or credential material",
+    "wallet connection or identity signing",
+    "transaction construction, signing or relay",
+    "payment acceptance or settlement",
+    "token delivery or treasury operations",
+    "key issuance, reveal, recovery or redemption",
+    "NFT minting or marketplace execution",
+    "backend, database, worker or administrative execution"
+  ],
+  "forbidden_file_classes": [
+    "environment files",
+    "private keys and certificates",
+    "source maps",
+    "server executables",
+    "database dumps",
+    "logs and local state"
+  ]
+}

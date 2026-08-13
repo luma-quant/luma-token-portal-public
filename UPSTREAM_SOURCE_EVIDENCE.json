@@ -1,0 +1,32 @@
+{
+  "schema": "luma-upstream-source-evidence-v1",
+  "source_repository": "private LUMA Quant frontend repository",
+  "source_private_commit_sha": "b39c2d752abfc9a1c4d151db8519e7b070c7c869",
+  "selection_policy": "explicit allowlist with deny-by-default boundary",
+  "entries": [
+    {
+      "source_path": "src/tokenPortal/forge.ts",
+      "candidate_path": "evidence/upstream/src/tokenPortal/forge.ts",
+      "copy_mode": "verbatim-review-evidence",
+      "runtime_included": false,
+      "bytes": 10380,
+      "sha256": "15a8ddac51ac78b17fad5ea9cccfd819e159beef03c7585a8ffe91d5f2dba84d"
+    },
+    {
+      "source_path": "src/api/tokenPortalForge.test.ts",
+      "candidate_path": "evidence/upstream/src/api/tokenPortalForge.test.ts",
+      "copy_mode": "verbatim-review-evidence",
+      "runtime_included": false,
+      "bytes": 8031,
+      "sha256": "dcece596ff7e06b7d887226977bb04d7971a7d256686b8c75259a25409f654d2"
+    },
+    {
+      "source_path": "public/logo-1.webp",
+      "candidate_path": "public/logo-1.webp",
+      "copy_mode": "verbatim-runtime-asset",
+      "runtime_included": true,
+      "bytes": 12564,
+      "sha256": "f704323c96b027ee8fa43b62c40c31b4f02c8717d488afb46a95e2875c3e6446"
+    }
+  ]
+}

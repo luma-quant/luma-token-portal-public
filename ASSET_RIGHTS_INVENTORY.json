@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "candidate": "luma-token-portal",
+  "policy": "INCLUDE_ONLY_OWNED_OR_LICENSED_FOR_PUBLIC_REPOSITORY_EXCLUDE_ALL_UNRESOLVED",
+  "attestation_scope": "OWNER_CONFIRMED_NOT_INDEPENDENTLY_VERIFIED",
+  "asset_count": 1,
+  "unresolved_asset_count": 0,
+  "assets": [
+    {
+      "path": "public/logo-1.webp",
+      "bytes": 12564,
+      "sha256": "f704323c96b027ee8fa43b62c40c31b4f02c8717d488afb46a95e2875c3e6446",
+      "status": "OWNED",
+      "attestation": "OWNER_CONFIRMED"
+    }
+  ]
+}

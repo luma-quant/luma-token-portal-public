@@ -1,0 +1,120 @@
+{
+  "schema": "luma-token-facts-v2",
+  "observed_at": "2026-08-12T23:01:32.2124535Z",
+  "status_vocabulary": {
+    "fact_status": [
+      "VERIFIED_ON_CHAIN",
+      "OPERATOR_DECLARED",
+      "NOT_INCLUDED"
+    ],
+    "legal_review_status": [
+      "NOT_YET_COMPLETED",
+      "IN_PROGRESS",
+      "COMPLETED"
+    ],
+    "independent_audit_status": [
+      "NOT_YET_COMPLETED",
+      "IN_PROGRESS",
+      "COMPLETED"
+    ],
+    "production_alignment_status": [
+      "REFERENCE_ONLY",
+      "PARTIALLY_ALIGNED",
+      "PRODUCTION_ALIGNED"
+    ]
+  },
+  "assurance_status": {
+    "chain_facts": "VERIFIED_ON_CHAIN",
+    "operator_policy": "OPERATOR_DECLARED",
+    "legal_review": "NOT_YET_COMPLETED",
+    "independent_audit": "NOT_YET_COMPLETED",
+    "production_alignment": "REFERENCE_ONLY"
+  },
+  "observation": {
+    "network": "solana-mainnet",
+    "commitment": "finalized",
+    "account_slot": 438902191,
+    "supply_slot": 438902191,
+    "rpc_api_version": "4.2.0-rc.1",
+    "evidence_kind": "read-only-rpc-observation"
+  },
+  "raw_rpc_evidence": {
+    "request_path": "evidence/onchain/SOLANA_RPC_REQUESTS.json",
+    "request_sha256": "812e800c422c8ca226421fe9503956dc8ddb0edf81c18067675d92496b774dbc",
+    "response_path": "evidence/onchain/SOLANA_RPC_RESPONSES.json",
+    "response_sha256": "12f575ab165c44aa51da48b8fc180ea4120a7d7e386bb1d54140e1ad18f0aa52",
+    "endpoint_disclosed": false,
+    "credentials_included": false,
+    "source_description": "Provider-neutral Solana Mainnet JSON-RPC requests and raw responses; the RPC endpoint is intentionally not published."
+  },
+  "asset": {
+    "display_name": "LUMA",
+    "symbol": "LUMA",
+    "classification": "operator-described utility token",
+    "classification_status": "OPERATOR_DECLARED",
+    "onchain_status": "VERIFIED_ON_CHAIN",
+    "mint_address": "CuQkxCi19mw57e6c9HDrKGfbGapCUSxK5cTmK6uyDPhW",
+    "token_program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "decimals": 6,
+    "initialized": true,
+    "supply_atoms": "734614848000000",
+    "supply_display": "734614848",
+    "mint_authority": "9T4ZZHK5Z79RUusidDFAUcQvAtQSkTeqAPtkqiAQnVKT",
+    "freeze_authority": "9T4ZZHK5Z79RUusidDFAUcQvAtQSkTeqAPtkqiAQnVKT",
+    "fact_provenance": "finalized Solana RPC mint account and token-supply responses"
+  },
+  "operational_addresses": [
+    {
+      "label": "Treasury vault",
+      "address": "C3YjLvv2GEob77yWkibUnj66T892Y37BpPvbnf5ZD2rZ",
+      "role_status": "OPERATOR_DECLARED",
+      "account_status": "VERIFIED_ON_CHAIN",
+      "account_owner": "11111111111111111111111111111111",
+      "executable": false,
+      "balance_in_raw_evidence": true,
+      "balance_interpretation": "NOT_INCLUDED"
+    },
+    {
+      "label": "Sale wallet",
+      "address": "68ZWTrd9wCq4HoUxBoDuV75geQPC9fVAFHAH9NgSLoyb",
+      "role_status": "OPERATOR_DECLARED",
+      "account_status": "VERIFIED_ON_CHAIN",
+      "account_owner": "11111111111111111111111111111111",
+      "executable": false,
+      "balance_in_raw_evidence": true,
+      "balance_interpretation": "NOT_INCLUDED"
+    }
+  ],
+  "utility_policy": {
+    "status": "OPERATOR_DECLARED",
+    "provenance": "operator-declared product configuration",
+    "encoded_in_mint": false,
+    "reference_price_usdc_per_luma": "0.0066",
+    "lumakey_cost_atoms": "3787878787",
+    "lumakey_cost_display": "3787.878787",
+    "lumakey_credit_entitlement": 1250,
+    "sale_package_usdc": [
+      25,
+      100,
+      500
+    ],
+    "custom_sale_minimum_usdc": 500,
+    "execution_in_candidate": false
+  },
+  "candidate_boundary": {
+    "status": "REFERENCE_ONLY",
+    "wallet_connection": false,
+    "payments": false,
+    "token_delivery": false,
+    "key_issuance": false,
+    "nft_minting": false,
+    "transaction_signing": false,
+    "backend_included": false,
+    "real_payments_status": "REAL_PAYMENTS_DISABLED",
+    "token_delivery_status": "TOKEN_DELIVERY_DISABLED"
+  },
+  "links": {
+    "solana_rpc_docs": "https://solana.com/docs/rpc/http/gettokensupply",
+    "mint_explorer": "https://solscan.io/token/CuQkxCi19mw57e6c9HDrKGfbGapCUSxK5cTmK6uyDPhW"
+  }
+}

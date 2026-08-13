@@ -1,0 +1,30 @@
+{
+  "name": "luma-token-portal-trust-reference",
+  "version": "0.1.0-rc1",
+  "private": true,
+  "description": "Sanitized, read-only reference implementation of the LUMA Token Portal trust surface.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "clean": "node scripts/clean-generated.mjs",
+    "audit:boundary": "node scripts/audit-boundary.mjs",
+    "audit:packages": "npm audit --omit=dev --audit-level=low",
+    "verify:closure": "node scripts/verify-public-manifest.mjs",
+    "verify:source": "node scripts/verify-source.mjs",
+    "verify:dependencies": "node scripts/verify-zero-dependencies.mjs",
+    "verify:ci": "node scripts/verify-ci.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "verify:sbom": "node scripts/verify-sbom.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "metadata": "node scripts/generate-sbom.mjs",
+    "manifest": "node scripts/generate-public-manifest.mjs",
+    "digest": "node scripts/candidate-digest.mjs",
+    "check": "npm run clean && npm run verify:closure && npm run verify:source && npm run verify:dependencies && npm run verify:ci && npm run audit:boundary && npm run verify:sbom && npm run verify:release && npm test && npm run build && npm run verify:dist"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
