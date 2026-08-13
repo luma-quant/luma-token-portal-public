@@ -7,11 +7,11 @@
 - Release class: `REFERENCE_IMPLEMENTATION`
 - Production alignment: `REFERENCE_ONLY`
 - Private source commit: `b39c2d752abfc9a1c4d151db8519e7b070c7c869`
-- Repository target: `https://github.com/wotanIII/luma-token-portal-public`, creation `PENDING`
+- Public repository: `https://github.com/wotanIII/luma-token-portal-public`, creation and visibility verified
 - Associated live domain: `https://token.lumaquant.tech`; candidate deployment: `NOT_DEPLOYED`
 - Independent audit: `NOT_YET_COMPLETED`
 - Legal review: `NOT_YET_COMPLETED`
-- Publication actions: none
+- Publication evidence: `PUBLICATION_EVIDENCE.json`, bound to public baseline `64c73b23aa0e6039653079d2b321d4025c0758d9`
 
 ## Intake decision
 
@@ -30,7 +30,7 @@ The candidate uses a three-file allowlist and deny-by-default extraction. Only t
 - legal, independent-audit, production-alignment, and fact statuses use closed vocabularies;
 - zero package dependencies are asserted from both package and lockfile;
 - Gitleaks source/history scanning uses a checksum-pinned CLI without GitHub API access;
-- CodeQL remains full-SHA pinned and public-only while private code scanning is unavailable;
+- CodeQL remains full-SHA pinned and completed successfully on the recorded public baseline;
 - deterministic SBOM, exact output allowlist, checksums, CSP, and capability scans remain enforced.
 
 ## Owner decisions and open review matters
@@ -52,3 +52,9 @@ Fresh chain evidence before later investor or marketing use and hosting-header
 verification before deployment are operational maintenance controls, not extra
 owner gates. Passing internal automated checks does not constitute an
 independent audit.
+
+The public baseline verification and CodeQL jobs passed in
+`https://github.com/wotanIII/luma-token-portal-public/actions/runs/31691842203`,
+and a point-in-time GitHub code-scanning query returned zero open alerts. These
+facts are evidence for the pre-status baseline only; they do not pre-approve a
+later commit.

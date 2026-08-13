@@ -92,7 +92,7 @@ test('Forge preview is exactly three, selectable Rare/Epic and never paid or min
   assert.equal(FROZEN_FORGE_PREVIEW.achievement_mode_available, false);
 });
 
-test('release is publication-review-ready without claiming repository creation or deployment', async () => {
+test('release records verified public publication without claiming deployment', async () => {
   const parsed = parseRelease(release);
   assert.equal(parsed.source_private_commit_sha, 'b39c2d752abfc9a1c4d151db8519e7b070c7c869');
   assert.equal(parsed.version, 'v0.1.0-rc1');
@@ -100,8 +100,8 @@ test('release is publication-review-ready without claiming repository creation o
   assert.equal(parsed.release_class, 'REFERENCE_IMPLEMENTATION');
   assert.equal(parsed.repository, 'wotanIII/luma-token-portal-public');
   assert.equal(parsed.repository_url, 'https://github.com/wotanIII/luma-token-portal-public');
-  assert.equal(parsed.repository_creation_status, 'PENDING');
-  assert.equal(parsed.repository_visibility, 'PUBLIC_REPOSITORY_PENDING');
+  assert.equal(parsed.repository_creation_status, 'COMPLETED_VERIFIED');
+  assert.equal(parsed.repository_visibility, 'PUBLIC_VERIFIED');
   assert.equal(parsed.repository_purpose, 'TRUST_LAYER_V1_PUBLIC_SOURCE');
   assert.equal(parsed.live_domain, 'https://token.lumaquant.tech');
   assert.equal(parsed.deployment_status, 'NOT_DEPLOYED');
@@ -113,12 +113,26 @@ test('release is publication-review-ready without claiming repository creation o
   assert.equal(parsed.rights_status, 'PROPRIETARY_SOURCE_AVAILABLE_ALL_RIGHTS_RESERVED');
   assert.equal(parsed.security_contact, 'security@lumaquant.tech');
   assert.equal(parsed.asset_rights_inventory_sha256, sha256(await readFile(path.join(root, 'ASSET_RIGHTS_INVENTORY.json'))));
-  assert.equal(parsed.publication_status, 'PUBLIC_REPOSITORY_PENDING');
-  assert.equal(parsed.publication_performed, false);
-  assert.deepEqual(parsed.publication_blockers, [
+  assert.equal(parsed.publication_status, 'PUBLIC_REPOSITORY_PUBLISHED');
+  assert.equal(parsed.publication_performed, true);
+  assert.deepEqual(parsed.open_review_matters, [
     'LEGAL_REVIEW_NOT_YET_COMPLETED',
     'INDEPENDENT_THIRD_PARTY_AUDIT_NOT_YET_COMPLETED',
   ]);
+  assert.deepEqual(parsed.separate_engine_e4_milestone, {
+    status: 'NOT_YET_COMPLETED',
+    scope: 'SEPARATE_ENGINE_EVIDENCE_MILESTONE',
+    public_repository_gate: false,
+    required_before_claim: 'PROSPECTIVELY_DEMONSTRATED',
+  });
+  const evidenceBytes = await readFile(path.join(root, parsed.publication_evidence_file));
+  const evidence = JSON.parse(evidenceBytes);
+  assert.equal(parsed.publication_evidence_sha256, sha256(evidenceBytes));
+  assert.equal(evidence.status_alignment_basis.commit_sha, '64c73b23aa0e6039653079d2b321d4025c0758d9');
+  assert.equal(evidence.status_alignment_basis.self_reference_avoided, true);
+  assert.equal(evidence.github_actions.conclusion, 'SUCCESS');
+  assert.equal(evidence.github_actions.jobs.codeql.conclusion, 'SUCCESS');
+  assert.equal(evidence.code_scanning.open_alert_count, 0);
 });
 
 test('the only bundled asset has exact owner-confirmed rights evidence', async () => {

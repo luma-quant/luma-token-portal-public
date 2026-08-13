@@ -6,7 +6,9 @@ import { canonicalTreeDigest, json, projectRoot, sha256 } from './lib.mjs';
 const release = await json('RELEASE.json');
 const facts = await json('TOKEN_FACTS.json');
 const upstream = await json('UPSTREAM_SOURCE_EVIDENCE.json');
+const publicationEvidence = await json('PUBLICATION_EVIDENCE.json');
 const assetInventory = await readFile(path.join(projectRoot, 'ASSET_RIGHTS_INVENTORY.json'));
+const publicationEvidenceBytes = await readFile(path.join(projectRoot, 'PUBLICATION_EVIDENCE.json'));
 const expectedCandidate = await canonicalTreeDigest(new Set([
   'PUBLIC_SOURCE_MANIFEST.json',
   'RELEASE.json',
@@ -39,8 +41,22 @@ if (release.rights_status !== 'PROPRIETARY_SOURCE_AVAILABLE_ALL_RIGHTS_RESERVED'
 if (release.asset_rights_inventory_sha256 !== sha256(assetInventory)) {
   throw new Error('Asset-rights inventory digest is stale.');
 }
-if (release.repository_creation_status !== 'PENDING' || release.publication_performed !== false) {
-  throw new Error('Pending repository creation must not be reported as publication.');
+if (release.repository_creation_status !== 'COMPLETED_VERIFIED' || release.publication_performed !== true) {
+  throw new Error('Verified public repository publication is not recorded consistently.');
+}
+if (release.repository_visibility !== 'PUBLIC_VERIFIED' || release.repository_status !== 'PUBLIC_REPOSITORY_PUBLISHED') {
+  throw new Error('Verified public repository status is missing.');
+}
+if (release.publication_evidence_file !== 'PUBLICATION_EVIDENCE.json' || release.publication_evidence_sha256 !== sha256(publicationEvidenceBytes)) {
+  throw new Error('Publication evidence binding is stale.');
+}
+if (publicationEvidence.status_alignment_basis?.commit_sha !== '64c73b23aa0e6039653079d2b321d4025c0758d9'
+    || publicationEvidence.status_alignment_basis?.self_reference_avoided !== true
+    || publicationEvidence.github_actions?.head_sha !== publicationEvidence.status_alignment_basis.commit_sha
+    || publicationEvidence.github_actions?.conclusion !== 'SUCCESS'
+    || publicationEvidence.github_actions?.jobs?.codeql?.conclusion !== 'SUCCESS'
+    || publicationEvidence.code_scanning?.open_alert_count !== 0) {
+  throw new Error('Publication evidence does not match the verified pre-status public head.');
 }
 if (release.real_payments_status !== 'REAL_PAYMENTS_DISABLED' || release.token_delivery_status !== 'TOKEN_DELIVERY_DISABLED') {
   throw new Error('Operational value boundaries are not explicitly disabled.');

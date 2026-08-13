@@ -37,7 +37,19 @@
     "real_payments": "REAL_PAYMENTS_DISABLED",
     "token_delivery": "TOKEN_DELIVERY_DISABLED"
   },
-  "publication_performed": false,
+  "separate_engine_e4_milestone": {
+    "status": "NOT_YET_COMPLETED",
+    "scope": "SEPARATE_ENGINE_EVIDENCE_MILESTONE",
+    "public_repository_gate": false,
+    "required_before_claim": "PROSPECTIVELY_DEMONSTRATED"
+  },
+  "publication_performed": true,
+  "publication_status": "PUBLIC_REPOSITORY_PUBLISHED",
+  "publication_evidence": {
+    "path": "PUBLICATION_EVIDENCE.json",
+    "sha256": "b059ddb941e47bae60756337ba77351702549870825b00abade77542d9fa9d17",
+    "baseline_public_commit_sha": "64c73b23aa0e6039653079d2b321d4025c0758d9"
+  },
   "open_review_matters": [
     "LEGAL_REVIEW_NOT_YET_COMPLETED",
     "INDEPENDENT_THIRD_PARTY_AUDIT_NOT_YET_COMPLETED"

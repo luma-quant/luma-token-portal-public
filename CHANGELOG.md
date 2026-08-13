@@ -1,5 +1,12 @@
 # Changelog
 
+## Post-publication status alignment - 2026-08-13
+
+- Recorded the verified public repository and kept deployment `NOT_DEPLOYED` and production alignment `REFERENCE_ONLY`.
+- Bound successful verification and CodeQL evidence to pre-status public head `64c73b23aa0e6039653079d2b321d4025c0758d9` and its immutable GitHub run URLs.
+- Recorded a point-in-time result of zero open code-scanning alerts without making a self-referential CI claim for this later change.
+- Kept exactly legal review and independent third-party audit open.
+
 ## v0.1.0-rc1 - 2026-08-13
 
 - Reclassified the candidate as a narrow `REFERENCE_IMPLEMENTATION` with `REFERENCE_ONLY` production alignment.

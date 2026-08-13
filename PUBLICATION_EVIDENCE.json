@@ -1,0 +1,36 @@
+{
+  "schema": "luma-publication-evidence-v1",
+  "repository": "wotanIII/luma-token-portal-public",
+  "repository_url": "https://github.com/wotanIII/luma-token-portal-public",
+  "repository_visibility": "PUBLIC",
+  "repository_created_at_utc": "2026-08-13T10:36:20Z",
+  "evidence_checked_at_utc": "2026-08-13T12:32:26Z",
+  "status_alignment_basis": {
+    "kind": "PUBLISHED_PRE_STATUS_HEAD",
+    "commit_sha": "64c73b23aa0e6039653079d2b321d4025c0758d9",
+    "self_reference_avoided": true,
+    "description": "Publication and CI evidence is bound to the public repository head that existed before this status-alignment change."
+  },
+  "github_actions": {
+    "workflow_name": "trust-reference-ci",
+    "run_id": 31691842203,
+    "run_url": "https://github.com/wotanIII/luma-token-portal-public/actions/runs/31691842203",
+    "head_sha": "64c73b23aa0e6039653079d2b321d4025c0758d9",
+    "conclusion": "SUCCESS",
+    "completed_at_utc": "2026-08-13T10:37:38Z",
+    "jobs": {
+      "verify": {
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/wotanIII/luma-token-portal-public/actions/runs/31691842203/job/94420676255"
+      },
+      "codeql": {
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/wotanIII/luma-token-portal-public/actions/runs/31691842203/job/94420676076"
+      }
+    }
+  },
+  "code_scanning": {
+    "open_alert_count": 0,
+    "observed_at_utc": "2026-08-13T12:32:26Z"
+  }
+}

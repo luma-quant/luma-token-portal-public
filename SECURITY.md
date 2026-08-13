@@ -24,9 +24,9 @@ The page makes two same-origin reads for bundled JSON and fails closed if either
 - zero-dependency package and lockfile verification plus `npm audit`;
 - exact distribution allowlist, checksums, CSP and runtime capability scan;
 - Gitleaks source and full-history scan;
-- CodeQL JavaScript analysis prepared for a future public-repository phase with SARIF upload enabled only inside that public-only job.
+- CodeQL JavaScript analysis with SARIF upload enabled only inside the public-only job.
 
-Every GitHub Action is pinned to a full commit SHA. Global workflow permissions contain only `contents: read`; the public-only CodeQL job alone receives job-scoped `security-events: write` so it can upload SARIF when the repository is public. Gitleaks runs through a checksum-pinned CLI and does not use repository secrets or the GitHub pull-request API. CodeQL remains prepared behind a public-repository activation gate and must not be reported as passed before that job runs. Repository creation remains `PENDING`; the planned target does not imply publication, audit, deployment, or production parity.
+Every GitHub Action is pinned to a full commit SHA. Global workflow permissions contain only `contents: read`; the CodeQL job alone receives job-scoped `security-events: write` so it can upload SARIF in the public repository. Gitleaks runs through a checksum-pinned CLI and does not use repository secrets or the GitHub pull-request API. Verification and CodeQL passed on public baseline `64c73b23aa0e6039653079d2b321d4025c0758d9`; `PUBLICATION_EVIDENCE.json` binds the run URLs and the point-in-time zero-open-alert observation. That evidence does not claim a result for any later commit.
 
 ## Threat model and limits
 
@@ -42,8 +42,8 @@ mailbox verification was not performed and no response-time SLA is claimed. Do
 not disclose a vulnerability through a public issue when it could expose users
 or operational systems.
 
-## Publication blockers
+## Open reviews and deployment boundary
 
 Legal review and an independent third-party audit remain `NOT_YET_COMPLETED`.
-Repository creation, publication and deployment have not occurred. Apply every
-header in `SECURITY_HEADERS.json` if a future deployment is approved.
+The repository is public, but deployment has not occurred. Apply every header
+in `SECURITY_HEADERS.json` if a future deployment is approved.

@@ -200,32 +200,39 @@ export function parseRelease(value) {
     'repository_review_state', 'repository_status', 'live_domain', 'deployment_status',
     'source_private_commit_sha', 'candidate_sha256', 'public_candidate_sha256',
     'candidate_sha256_scope', 'exported_at', 'exported_at_utc', 'production_alignment', 'detailed_alignment',
+    'separate_engine_e4_milestone',
     'independent_audit', 'legal_review', 'operator_identity_status', 'operator_identity',
     'license_status', 'rights_status', 'asset_rights_status',
     'asset_rights_inventory_sha256', 'security_contact',
     'security_contact_status', 'security_contact_independent_verification',
     'owner_decision_manifest_sha256', 'external_publish_authorized',
     'publication_review_status', 'publication_status', 'publication_performed',
-    'publication_blockers', 'publish_state', 'execution_profile',
+    'publication_evidence_file', 'publication_evidence_sha256',
+    'open_review_matters', 'publish_state', 'execution_profile',
     'real_payments_status', 'token_delivery_status', 'verification',
   ], 'RELEASE');
   exactString(value.schema, 'luma-public-candidate-release-v2', 'release schema');
   exactString(value.name, 'luma-token-portal-trust-reference', 'release name');
   exactString(value.version, 'v0.1.0-rc1', 'release version');
   exactString(value.public_release, '0.1.0-rc1', 'public release');
-  exactString(value.status, 'PUBLICATION_REVIEW_READY', 'release status');
+  exactString(value.status, 'PUBLIC_REFERENCE_PUBLISHED', 'release status');
   exactString(value.release_class, 'REFERENCE_IMPLEMENTATION', 'release class');
   exactString(value.repository, 'wotanIII/luma-token-portal-public', 'repository identity');
   exactString(value.repository_url, ['https:', '', 'github.com', value.repository].join('/'), 'repository URL');
-  exactString(value.repository_creation_status, 'PENDING', 'repository creation status');
-  exactString(value.repository_visibility, 'PUBLIC_REPOSITORY_PENDING', 'repository visibility');
+  exactString(value.repository_creation_status, 'COMPLETED_VERIFIED', 'repository creation status');
+  exactString(value.repository_visibility, 'PUBLIC_VERIFIED', 'repository visibility');
   exactString(value.repository_purpose, 'TRUST_LAYER_V1_PUBLIC_SOURCE', 'repository purpose');
-  exactString(value.repository_review_state, 'PUBLICATION_REVIEW_READY', 'repository review state');
-  exactString(value.repository_status, 'PUBLIC_REPOSITORY_PENDING', 'repository status');
+  exactString(value.repository_review_state, 'PUBLIC_REFERENCE_PUBLISHED', 'repository review state');
+  exactString(value.repository_status, 'PUBLIC_REPOSITORY_PUBLISHED', 'repository status');
   exactString(value.live_domain, 'https://token.lumaquant.tech', 'associated live domain');
   exactString(value.deployment_status, 'NOT_DEPLOYED', 'candidate deployment status');
   exactString(value.production_alignment, 'REFERENCE_ONLY', 'production alignment');
   exactString(value.detailed_alignment, 'READ_ONLY_REFERENCE_SURFACE_ASSOCIATED_WITH_DOMAIN_NO_DEPLOYMENT_PARITY_CLAIM', 'detailed alignment');
+  exactKeys(value.separate_engine_e4_milestone, ['status', 'scope', 'public_repository_gate', 'required_before_claim'], 'separate Engine E4 milestone');
+  exactString(value.separate_engine_e4_milestone.status, 'NOT_YET_COMPLETED', 'Engine E4 status');
+  exactString(value.separate_engine_e4_milestone.scope, 'SEPARATE_ENGINE_EVIDENCE_MILESTONE', 'Engine E4 scope');
+  if (value.separate_engine_e4_milestone.public_repository_gate !== false) throw new Error('Engine E4 must remain separate from repository publication.');
+  exactString(value.separate_engine_e4_milestone.required_before_claim, 'PROSPECTIVELY_DEMONSTRATED', 'Engine E4 claim gate');
   exactString(value.independent_audit, 'NOT_YET_COMPLETED', 'independent audit');
   exactString(value.legal_review, 'NOT_YET_COMPLETED', 'legal review');
   exactString(value.operator_identity_status, 'COMPLETED_OWNER_CONFIRMED', 'operator identity status');
@@ -242,10 +249,12 @@ export function parseRelease(value) {
   sha256String(value.owner_decision_manifest_sha256, 'owner decision manifest digest');
   if (value.external_publish_authorized !== true) throw new Error('Owner publication authorization is missing.');
   exactString(value.publication_review_status, 'PUBLICATION_REVIEW_READY', 'publication review status');
-  exactString(value.publication_status, 'PUBLIC_REPOSITORY_PENDING', 'publication status');
-  if (value.publication_performed !== false) throw new Error('Publication must remain not performed.');
-  exactArray(value.publication_blockers, ['LEGAL_REVIEW_NOT_YET_COMPLETED', 'INDEPENDENT_THIRD_PARTY_AUDIT_NOT_YET_COMPLETED'], 'publication blockers');
-  exactString(value.publish_state, 'PUBLIC_REPOSITORY_PENDING', 'publish state');
+  exactString(value.publication_status, 'PUBLIC_REPOSITORY_PUBLISHED', 'publication status');
+  if (value.publication_performed !== true) throw new Error('Verified publication must be recorded as performed.');
+  exactString(value.publication_evidence_file, 'PUBLICATION_EVIDENCE.json', 'publication evidence path');
+  sha256String(value.publication_evidence_sha256, 'publication evidence digest');
+  exactArray(value.open_review_matters, ['LEGAL_REVIEW_NOT_YET_COMPLETED', 'INDEPENDENT_THIRD_PARTY_AUDIT_NOT_YET_COMPLETED'], 'open review matters');
+  exactString(value.publish_state, 'PUBLIC_REPOSITORY_PUBLISHED', 'publish state');
   exactString(value.execution_profile, 'READ_ONLY_STATIC_NO_WALLET_NO_PAYMENT_NO_MINT', 'execution profile');
   exactString(value.real_payments_status, 'REAL_PAYMENTS_DISABLED', 'real payment status');
   exactString(value.token_delivery_status, 'TOKEN_DELIVERY_DISABLED', 'token delivery status');
@@ -261,7 +270,7 @@ export function parseRelease(value) {
     'codeql', 'tests', 'build', 'dist_scan', 'sbom',
   ], 'release verification');
   for (const [key, status] of Object.entries(value.verification)) {
-    const expected = key === 'codeql' ? 'PREPARED_NOT_EXECUTED_PUBLIC_REPOSITORY_PENDING' : 'PASSED';
+    const expected = key === 'codeql' ? 'PASSED_ON_PUBLISHED_PRE_STATUS_HEAD' : 'PASSED';
     exactString(status, expected, `${key} verification`);
   }
   return Object.freeze(value);

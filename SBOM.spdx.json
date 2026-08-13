@@ -99,7 +99,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f02303b2143d1669f1310051633a9e2acbbaff31c97a78c0d873d01ab13a98b5"
+          "checksumValue": "777ef79f1f7aa525d11cc10bbd1a26594b78533a0ef23bdbf2a7e558ef588164"
         }
       ]
     },
@@ -109,7 +109,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "538a2b4f47f5cfa234c52b6fae27abb7fb895225dae4c298c7557407d8cbcdb4"
+          "checksumValue": "d686a4833f1032a1adc86440133ef2cd41012672d2ff0d8ef14532886213a217"
         }
       ]
     },
@@ -179,7 +179,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c89eeea3424e927e80993b47a0a3cb38225136625e8a41700197d12e528091cb"
+          "checksumValue": "ee45456b2d83e31c3041711e1cbddd5be0f6bb3d50158fe8de3342f262aa26d1"
         }
       ]
     },
@@ -199,7 +199,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5a5b887264f105580817df5e23e37eb0d9dabb6e37106f2ea31fd4a75e150c2c"
+          "checksumValue": "f9851ba2e736f0d0af05d4af09a49b86d6fec288a209f7c9058baa1ea41246d1"
         }
       ]
     },
@@ -209,7 +209,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0b4433f05738f5e886a3d32984e7dec39c239afd26f0376e39befd681dd5e61d"
+          "checksumValue": "470fe78abe4f43c57d240f728ae8743895d6f17a06ef1f48e1fb05b088ae2d26"
         }
       ]
     },
@@ -254,12 +254,22 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-File-26ea37d480f77af7",
+      "fileName": "./PUBLICATION_EVIDENCE.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b059ddb941e47bae60756337ba77351702549870825b00abade77542d9fa9d17"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-File-b335630551682c19",
       "fileName": "./README.md",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d47699d74be3aca6c533a349c66c7c80cf6d2cb4fd402dc7b4d302461f6829b7"
+          "checksumValue": "8800ab8a200877176ec65f48d39918f6e76f6b6d2902e1d425322601344bd8c9"
         }
       ]
     },
@@ -349,7 +359,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "965eaeb23aaf07d372b8eb18623eed8feef1c68f7421fc1a9a37e5b7c5574ab5"
+          "checksumValue": "d526a6c3fb22a88660a0b9e7dc3fd8e52cad37ac9b7f9d27fb39d6c2f8489ed0"
         }
       ]
     },
@@ -409,7 +419,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ae8438a0febc46cff5af777fdd2a26f4e45a25725d6ae8c2851b720da7aaf0e6"
+          "checksumValue": "9682acd913f9f0ecee849f83b0bef30b1aec474253f559ee8a34f593091fdfc6"
         }
       ]
     },
@@ -459,7 +469,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "def620352f1b5c1a77a35da93d91199999b6cc72c513cd6fdc217970c8ffae89"
+          "checksumValue": "9d916c37c90166a95a85246758f448b6681d17f9cf921f5e90f263b06427ee1c"
         }
       ]
     },
@@ -479,7 +489,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8153a30fd962c5cc9174d866169844373d0ac613d8cab0bf372accfe4d391ccd"
+          "checksumValue": "b464cc2326c169dc2172849e0d581e4fe9ad411289457c0b77f1512b057d79ee"
         }
       ]
     },
@@ -499,7 +509,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4a7c854d406238d16df6f74641b52479405d2dbf4d3c2e15edf01031152ecdac"
+          "checksumValue": "3127313590cd2ca24c159c9fb844f3e08ca9c11acbc2b174426281a804c8f4ac"
         }
       ]
     },
@@ -639,6 +649,11 @@
       "spdxElementId": "SPDXRef-Package",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-File-45ff104721cc35d0"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-26ea37d480f77af7"
     },
     {
       "spdxElementId": "SPDXRef-Package",

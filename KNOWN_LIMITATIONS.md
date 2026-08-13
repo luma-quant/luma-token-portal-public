@@ -11,5 +11,5 @@
 9. **Forge is preview-only.** There is no achievement mode, AI provider, paid generation, NFT mint, transfer, marketplace, or ownership mutation.
 10. **No authenticated demonstration.** Wallet-only Forge behavior is represented by evidence, not executed by this static page.
 11. **Proprietary source-available license.** `LICENSE.md` permits transparency review but grants no general copying, modification, redistribution or deployment rights.
-12. **Domain association is not deployment parity.** `https://token.lumaquant.tech` is the associated product domain, while this reference candidate remains `NOT_DEPLOYED`, unpublished, and `REFERENCE_ONLY`.
-13. **CI activation is separate from repository existence.** Checksum-pinned Gitleaks runs without GitHub API access. CodeQL remains prepared and public-only until code scanning is available in an eligible repository.
+12. **Publication is not deployment parity.** The source repository is public and `https://token.lumaquant.tech` is the associated product domain, while this reference candidate remains `NOT_DEPLOYED` and `REFERENCE_ONLY`.
+13. **CI evidence is point-in-time.** Verification and CodeQL passed on published baseline `64c73b23aa0e6039653079d2b321d4025c0758d9`; zero open code-scanning alerts were observed at the time recorded in `PUBLICATION_EVIDENCE.json`. A later commit requires its own run before the same claim applies to it.
